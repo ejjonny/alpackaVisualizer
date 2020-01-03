@@ -16,6 +16,7 @@
 		4E37250223BF1370003F4087 /* PackingRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E37250123BF1370003F4087 /* PackingRect.swift */; };
 		4E37250423BF141C003F4087 /* PackableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E37250323BF141C003F4087 /* PackableObject.swift */; };
 		4E37250623BF1879003F4087 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E37250523BF1879003F4087 /* Home.swift */; };
+		4E37250823BF3414003F4087 /* SizeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E37250723BF3414003F4087 /* SizeControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4E37250123BF1370003F4087 /* PackingRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingRect.swift; sourceTree = "<group>"; };
 		4E37250323BF141C003F4087 /* PackableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackableObject.swift; sourceTree = "<group>"; };
 		4E37250523BF1879003F4087 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		4E37250723BF3414003F4087 /* SizeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				4E3724EA23BF0EC2003F4087 /* AppDelegate.swift */,
 				4E3724EC23BF0EC2003F4087 /* SceneDelegate.swift */,
 				4E37250123BF1370003F4087 /* PackingRect.swift */,
+				4E37250723BF3414003F4087 /* SizeControl.swift */,
 				4E37250523BF1879003F4087 /* Home.swift */,
 				4E37250323BF141C003F4087 /* PackableObject.swift */,
 				4E3724F023BF0EC3003F4087 /* Assets.xcassets */,
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E37250823BF3414003F4087 /* SizeControl.swift in Sources */,
 				4E3724EB23BF0EC2003F4087 /* AppDelegate.swift in Sources */,
 				4E3724ED23BF0EC2003F4087 /* SceneDelegate.swift in Sources */,
 				4E37250623BF1879003F4087 /* Home.swift in Sources */,

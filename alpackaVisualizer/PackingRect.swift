@@ -29,12 +29,3 @@ struct PackingRect: View {
               blue: Double.random(in: 0...255) / 255)
     }
 }
-
-//struct PackingRect_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PackingRect(objects: [
-//            PackableObject(origin: CGPoint(x: 20, y: 20), width: 20, height: 20),
-//            PackableObject(origin: CGPoint(x: 40, y: 11), width: 134, height: 40)
-//        ])
-//    }
-//}

@@ -20,6 +20,9 @@ struct Home: View {
     @State var objects = [PackableObject]()
     var body: some View {
         VStack {
+            Text("Alpacka")
+                .font(.largeTitle)
+                .fontWeight(.bold)
             HStack {
                 Text("Width")
                 Spacer()
@@ -77,9 +80,15 @@ struct Home: View {
     }
     
     func add() {
-        for _ in 1...Int(insertCount)! {
-            let objectHeight = heightRandom ? CGFloat(Int.random(in: Int(minHeight)!...Int(height)!)) : CGFloat(Double(height)!)
-            let objectWidth = widthRandom ? CGFloat(Int.random(in: Int(minWidth)!...Int(width)!)) : CGFloat(Double(width)!)
+        guard
+            let insertCount = Int(insertCount),
+            let minHeight = Int(minHeight),
+            let height = Int(height),
+            let minWidth = Int(minWidth),
+            let width = Int(width) else { return }
+        for _ in 1...insertCount {
+            let objectHeight = heightRandom ? CGFloat(Int.random(in: minHeight...height)) : CGFloat(height)
+            let objectWidth = widthRandom ? CGFloat(Int.random(in: minWidth...width)) : CGFloat(width)
             objects.append(PackableObject(origin: CGPoint.zero, width: objectWidth, height: objectHeight))
         }
     }
@@ -96,32 +105,6 @@ struct Home: View {
     }
 }
 
-struct SizeControl: View {
-    @Binding var size: String
-    @Binding var minimum: String
-    @Binding var random: Bool
-    let title: String
-    var body: some View {
-        HStack {
-            if random {
-                TextField("Min", text: $minimum)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
-                    .padding([.leading, .trailing], 15)
-                Text("to")
-                    .font(.system(size: 15))
-            }
-            TextField(random ? "Max" : title, text: $size)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .keyboardType(.numberPad)
-                .padding([.leading, .trailing], 15)
-            VStack {
-                Toggle(isOn: $random) { EmptyView() }
-            }
-            .padding([.leading, .trailing], 15)
-        }
-    }
-}
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
