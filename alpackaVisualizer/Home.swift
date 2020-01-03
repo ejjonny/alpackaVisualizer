@@ -18,6 +18,9 @@ struct Home: View {
     @State var minHeight: String = "1"
     @State var insertCount: String = "1"
     @State var objects = [PackableObject]()
+    @State var overFlow = Int()
+    @State var packedObjects = Int()
+    @State var time = Double()
     var body: some View {
         VStack {
             Text("Alpacka")
@@ -62,6 +65,9 @@ struct Home: View {
                 .padding()
                 Button(action: {
                     self.objects.removeAll()
+                    self.overFlow = 0
+                    self.packedObjects = 0
+                    self.time = 0
                 }) {
                     Rectangle()
                         .cornerRadius(10)
@@ -71,11 +77,20 @@ struct Home: View {
                 .padding()
             }
             .frame(height: 80)
+            HStack {
+                Text("Packed Objects: \(packedObjects)")
+                    .font(.system(size: 10))
+                Text("Overflow: \(overFlow)")
+                    .font(.system(size: 10))
+                    .foregroundColor(overFlow > 0 ? .red : .black)
+                Text("Seconds: \(time)")
+                    .font(.system(size: 10))
+            }
             PackingRect(objects: $objects)
                 .border(Color.black)
                 .frame(width: 400, height: 400)
                 .background(Color.gray)
-                .padding()
+                .padding([.leading, .trailing, .bottom], 15)
         }
     }
     
@@ -94,12 +109,17 @@ struct Home: View {
     }
     
     func pack() {
+        let startDate = Date()
         Alpacka.Packer().pack(objects, origin: \.origin, in: CGSize(width: 400, height: 400)) { result in
+            self.time = abs(startDate.timeIntervalSinceNow)
             switch result {
-            case let .overFlow(packed, overFlow: _):
+            case let .overFlow(packed, overFlow: overFlow):
                 self.objects = packed
+                self.overFlow = overFlow.count
+                self.packedObjects = packed.count
             case let .success(packed):
                 self.objects = packed
+                self.packedObjects = packed.count
             }
         }
     }
