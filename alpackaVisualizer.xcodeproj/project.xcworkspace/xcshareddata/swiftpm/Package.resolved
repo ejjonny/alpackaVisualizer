@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alpacka",
+        "repositoryURL": "https://github.com/ejjonny/alpacka",
+        "state": {
+          "branch": null,
+          "revision": "9aa7b0e46f1144bedad9e697dc78583f0a5bfe6f",
+          "version": "3.0.0-beta"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
