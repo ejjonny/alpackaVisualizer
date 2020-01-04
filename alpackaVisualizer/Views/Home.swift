@@ -40,7 +40,11 @@ struct Home: View {
             }
             .padding()
             SizeControl(size: $height, minimum: $minHeight, random: $heightRandom, title: "Height")
-            Text("Insert")
+            HStack {
+                Text("Insert")
+                Spacer()
+            }
+            .padding()
             HStack {
                 TextField("Amount to insert", text: $insertCount)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -48,7 +52,6 @@ struct Home: View {
                     .padding()
                 Button(action: {
                     self.add()
-                    self.pack()
                 }) {
                     Rectangle()
                         .cornerRadius(10)
@@ -82,7 +85,7 @@ struct Home: View {
                     .font(.system(size: 10))
                 Text("Overflow: \(overFlow)")
                     .font(.system(size: 10))
-                    .foregroundColor(overFlow > 0 ? .red : .black)
+                    .foregroundColor(overFlow > 0 ? .red : Color("textColor"))
                 Text("Seconds: \(time)")
                     .font(.system(size: 10))
             }
@@ -101,11 +104,14 @@ struct Home: View {
             let height = Int(height),
             let minWidth = Int(minWidth),
             let width = Int(width) else { return }
+        guard minHeight <= height,
+            minWidth <= width else { return }
         for _ in 1...insertCount {
             let objectHeight = heightRandom ? CGFloat(Int.random(in: minHeight...height)) : CGFloat(height)
             let objectWidth = widthRandom ? CGFloat(Int.random(in: minWidth...width)) : CGFloat(width)
             objects.append(PackableObject(origin: CGPoint.zero, width: objectWidth, height: objectHeight))
         }
+        pack()
     }
     
     func pack() {

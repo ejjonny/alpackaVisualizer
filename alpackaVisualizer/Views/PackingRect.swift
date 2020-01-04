@@ -16,11 +16,12 @@ struct PackingRect: View {
                 return Rectangle()
                     .offset(self.objects[index].origin)
                     .frame(width: self.objects[index].width, height: self.objects[index].height)
-                    .animation(.easeInOut)
+                    .animation(.spring())
                     .foregroundColor(self.randomColor())
             }
             .transition(.opacity)
         }
+        .clipped()
     }
     
     func randomColor() -> Color {
