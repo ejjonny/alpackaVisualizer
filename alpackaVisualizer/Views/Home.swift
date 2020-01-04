@@ -23,9 +23,14 @@ struct Home: View {
     @State var time = Double()
     var body: some View {
         VStack {
-            Text("Alpacka")
-                .font(.largeTitle)
-                .fontWeight(.bold)
+            HStack {
+                Image("alpackaLogo")
+                    .resizable()
+                    .aspectRatio(nil, contentMode: .fit)
+                Text("Alpacka")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+            }
             HStack {
                 Text("Width")
                 Spacer()
