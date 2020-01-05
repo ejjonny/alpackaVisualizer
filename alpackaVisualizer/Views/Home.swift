@@ -73,9 +73,7 @@ struct Home: View {
                 .padding()
                 Button(action: {
                     self.objects.removeAll()
-                    self.overFlow = 0
-                    self.packedObjects = 0
-                    self.time = 0
+                    self.clearMetrics()
                 }) {
                     Rectangle()
                         .cornerRadius(10)
@@ -121,6 +119,7 @@ struct Home: View {
     
     func pack() {
         let startDate = Date()
+        clearMetrics()
         Alpacka.Packer().pack(objects, origin: \.origin, in: CGSize(width: 400, height: 400)) { result in
             self.time = abs(startDate.timeIntervalSinceNow)
             switch result {
@@ -133,6 +132,12 @@ struct Home: View {
                 self.packedObjects = packed.count
             }
         }
+    }
+    
+    func clearMetrics() {
+        overFlow = 0
+        packedObjects = 0
+        time = 0
     }
 }
 
