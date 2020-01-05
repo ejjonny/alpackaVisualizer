@@ -4,4 +4,4 @@ A simple visualizer / example app for [Alpacka](https://github.com/ejjonny/alpac
 
  <img src="/example.gif?raw=true" width="200px">
  
- Allows testing and visualization of the packing algorithm's result & speed, with pretty animation.
+ Allows testing and visualization of the packing algorithm's result & speed, with pretty animation :)
