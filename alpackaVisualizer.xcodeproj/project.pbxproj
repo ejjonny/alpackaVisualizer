@@ -12,11 +12,11 @@
 		4E3724F123BF0EC3003F4087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3724F023BF0EC3003F4087 /* Assets.xcassets */; };
 		4E3724F423BF0EC3003F4087 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3724F323BF0EC3003F4087 /* Preview Assets.xcassets */; };
 		4E3724F723BF0EC3003F4087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3724F523BF0EC3003F4087 /* LaunchScreen.storyboard */; };
-		4E37250023BF11FE003F4087 /* Alpacka in Frameworks */ = {isa = PBXBuildFile; productRef = 4E3724FF23BF11FE003F4087 /* Alpacka */; };
 		4E37250223BF1370003F4087 /* PackingRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E37250123BF1370003F4087 /* PackingRect.swift */; };
 		4E37250423BF141C003F4087 /* PackableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E37250323BF141C003F4087 /* PackableObject.swift */; };
 		4E37250623BF1879003F4087 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E37250523BF1879003F4087 /* Home.swift */; };
 		4E37250823BF3414003F4087 /* SizeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E37250723BF3414003F4087 /* SizeControl.swift */; };
+		4E9944B023C16A610044C3F0 /* Alpacka in Frameworks */ = {isa = PBXBuildFile; productRef = 4E9944AF23C16A610044C3F0 /* Alpacka */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E37250023BF11FE003F4087 /* Alpacka in Frameworks */,
+				4E9944B023C16A610044C3F0 /* Alpacka in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +127,7 @@
 			);
 			name = alpackaVisualizer;
 			packageProductDependencies = (
-				4E3724FF23BF11FE003F4087 /* Alpacka */,
+				4E9944AF23C16A610044C3F0 /* Alpacka */,
 			);
 			productName = alpackaVisualizer;
 			productReference = 4E3724E723BF0EC2003F4087 /* alpackaVisualizer.app */;
@@ -158,7 +158,7 @@
 			);
 			mainGroup = 4E3724DE23BF0EC2003F4087;
 			packageReferences = (
-				4E3724FE23BF11FE003F4087 /* XCRemoteSwiftPackageReference "alpacka" */,
+				4E9944AE23C16A610044C3F0 /* XCRemoteSwiftPackageReference "alpacka" */,
 			);
 			productRefGroup = 4E3724E823BF0EC2003F4087 /* Products */;
 			projectDirPath = "";
@@ -388,7 +388,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4E3724FE23BF11FE003F4087 /* XCRemoteSwiftPackageReference "alpacka" */ = {
+		4E9944AE23C16A610044C3F0 /* XCRemoteSwiftPackageReference "alpacka" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ejjonny/alpacka";
 			requirement = {
@@ -399,9 +399,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4E3724FF23BF11FE003F4087 /* Alpacka */ = {
+		4E9944AF23C16A610044C3F0 /* Alpacka */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4E3724FE23BF11FE003F4087 /* XCRemoteSwiftPackageReference "alpacka" */;
+			package = 4E9944AE23C16A610044C3F0 /* XCRemoteSwiftPackageReference "alpacka" */;
 			productName = Alpacka;
 		};
 /* End XCSwiftPackageProductDependency section */
