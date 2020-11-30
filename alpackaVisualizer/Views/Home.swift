@@ -8,19 +8,20 @@
 
 import SwiftUI
 import Alpacka
+import Combine
 
 struct Home: View {
-    @State var width: String = "10"
+    @State var width: String = "100"
     @State var widthRandom: Bool = true
-    @State var minWidth: String = "1"
-    @State var height: String = "10"
+    @State var minWidth: String = "10"
+    @State var height: String = "100"
     @State var heightRandom: Bool = true
-    @State var minHeight: String = "1"
-    @State var insertCount: String = "1"
+    @State var minHeight: String = "10"
+    @State var insertCount: String = "100"
     @State var objects = [PackableObject]()
-    @State var overFlow = Int()
-    @State var packedObjects = Int()
+    @State var packedObjects = [PackableObject]()
     @State var time = Double()
+    @State var cancellables = Set<AnyCancellable>()
     var body: some View {
         VStack {
             HStack {
@@ -30,6 +31,7 @@ struct Home: View {
                 Text("Alpacka")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .fixedSize(horizontal: true, vertical: false)
             }
             HStack {
                 Text("Width")
@@ -73,6 +75,7 @@ struct Home: View {
                 .padding()
                 Button(action: {
                     self.objects.removeAll()
+                    self.packedObjects.removeAll()
                     self.clearMetrics()
                 }) {
                     Rectangle()
@@ -84,15 +87,15 @@ struct Home: View {
             }
             .frame(height: 80)
             HStack {
-                Text("Packed Objects: \(packedObjects)")
+                Text("Packed Objects: \(packedObjects.count)")
                     .font(.system(size: 10))
-                Text("Overflow: \(overFlow)")
+                Text("Overflow: \(objects.count - packedObjects.count)")
                     .font(.system(size: 10))
-                    .foregroundColor(overFlow > 0 ? .red : Color("textColor"))
+                    .foregroundColor(objects.count - packedObjects.count > 0 ? .red : Color("textColor"))
                 Text("Seconds: \(time)")
                     .font(.system(size: 10))
             }
-            PackingRect(objects: $objects)
+            PackingRect(objects: $packedObjects)
                 .border(Color.black)
                 .frame(width: 400, height: 400)
                 .background(Color.gray)
@@ -120,23 +123,20 @@ struct Home: View {
     func pack() {
         let startDate = Date()
         clearMetrics()
-        Alpacka.Packer().pack(objects, origin: \.origin, in: CGSize(width: 400, height: 400)) { result in
-            self.time = abs(startDate.timeIntervalSinceNow)
-            switch result {
-            case let .overFlow(packed, overFlow: overFlow):
-                self.objects = packed
-                self.overFlow = overFlow.count
-                self.packedObjects = packed.count
-            case let .success(packed):
-                self.objects = packed
-                self.packedObjects = packed.count
+        Alpacka.pack(objects, origin: \.origin, in: .init(w: 400, h: 400))
+            .sink { result in
+                self.time = abs(startDate.timeIntervalSinceNow)
+                switch result {
+                case let .overFlow(packed, overFlow: _):
+                    self.packedObjects = packed
+                case let .packed(items):
+                    self.packedObjects = items
+                }
             }
-        }
+            .store(in: &cancellables)
     }
     
     func clearMetrics() {
-        overFlow = 0
-        packedObjects = 0
         time = 0
     }
 }

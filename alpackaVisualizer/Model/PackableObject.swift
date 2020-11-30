@@ -10,8 +10,8 @@ import UIKit
 import Alpacka
 
 struct PackableObject: Sized, Hashable {
-    var packingSize: CGSize {
-        CGSize(width: width, height: height)
+    var packingSize: Alpacka.Size {
+        .init(CGSize(width: width, height: height))
     }
     var origin: CGPoint
     let width: CGFloat

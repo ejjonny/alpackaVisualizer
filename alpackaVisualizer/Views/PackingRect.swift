@@ -14,10 +14,9 @@ struct PackingRect: View {
         GeometryReader { proxy in
             ForEach(self.objects.indices, id: \.self) { index in
                 return Rectangle()
-                    .offset(self.objects[index].origin)
+                    .border(Color.blue)
+                    .offset(CGSize(width: self.objects[index].origin.x, height: self.objects[index].origin.y))
                     .frame(width: self.objects[index].width, height: self.objects[index].height)
-                    .animation(.spring())
-                    .foregroundColor(self.randomColor())
             }
             .transition(.opacity)
         }
