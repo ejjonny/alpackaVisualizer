@@ -7,30 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E3724EB23BF0EC2003F4087 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3724EA23BF0EC2003F4087 /* AppDelegate.swift */; };
-		4E3724ED23BF0EC2003F4087 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3724EC23BF0EC2003F4087 /* SceneDelegate.swift */; };
 		4E3724F123BF0EC3003F4087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3724F023BF0EC3003F4087 /* Assets.xcassets */; };
 		4E3724F423BF0EC3003F4087 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3724F323BF0EC3003F4087 /* Preview Assets.xcassets */; };
-		4E3724F723BF0EC3003F4087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3724F523BF0EC3003F4087 /* LaunchScreen.storyboard */; };
 		4E37250223BF1370003F4087 /* PackingRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E37250123BF1370003F4087 /* PackingRect.swift */; };
 		4E37250423BF141C003F4087 /* PackableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E37250323BF141C003F4087 /* PackableObject.swift */; };
 		4E37250623BF1879003F4087 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E37250523BF1879003F4087 /* Home.swift */; };
 		4E37250823BF3414003F4087 /* SizeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E37250723BF3414003F4087 /* SizeControl.swift */; };
+		4E466BA129D8C72D0096A66F /* AlpackaVisualizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E466BA029D8C72D0096A66F /* AlpackaVisualizerApp.swift */; };
 		4E9944B023C16A610044C3F0 /* Alpacka in Frameworks */ = {isa = PBXBuildFile; productRef = 4E9944AF23C16A610044C3F0 /* Alpacka */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E3724E723BF0EC2003F4087 /* alpackaVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alpackaVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E3724EA23BF0EC2003F4087 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E3724EC23BF0EC2003F4087 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4E3724F023BF0EC3003F4087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E3724F323BF0EC3003F4087 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4E3724F623BF0EC3003F4087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E3724F823BF0EC3003F4087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E37250123BF1370003F4087 /* PackingRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingRect.swift; sourceTree = "<group>"; };
 		4E37250323BF141C003F4087 /* PackableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackableObject.swift; sourceTree = "<group>"; };
 		4E37250523BF1879003F4087 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		4E37250723BF3414003F4087 /* SizeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeControl.swift; sourceTree = "<group>"; };
+		4E466BA029D8C72D0096A66F /* AlpackaVisualizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlpackaVisualizerApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +97,9 @@
 		4EBF656923BF3AED00994106 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4E3724EA23BF0EC2003F4087 /* AppDelegate.swift */,
-				4E3724EC23BF0EC2003F4087 /* SceneDelegate.swift */,
 				4E3724F023BF0EC3003F4087 /* Assets.xcassets */,
-				4E3724F523BF0EC3003F4087 /* LaunchScreen.storyboard */,
 				4E3724F823BF0EC3003F4087 /* Info.plist */,
+				4E466BA029D8C72D0096A66F /* AlpackaVisualizerApp.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -140,7 +134,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1410;
 				ORGANIZATIONNAME = "Ethan John";
 				TargetAttributes = {
 					4E3724E623BF0EC2003F4087 = {
@@ -174,7 +168,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E3724F723BF0EC3003F4087 /* LaunchScreen.storyboard in Resources */,
 				4E3724F423BF0EC3003F4087 /* Preview Assets.xcassets in Resources */,
 				4E3724F123BF0EC3003F4087 /* Assets.xcassets in Resources */,
 			);
@@ -188,8 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E37250823BF3414003F4087 /* SizeControl.swift in Sources */,
-				4E3724EB23BF0EC2003F4087 /* AppDelegate.swift in Sources */,
-				4E3724ED23BF0EC2003F4087 /* SceneDelegate.swift in Sources */,
+				4E466BA129D8C72D0096A66F /* AlpackaVisualizerApp.swift in Sources */,
 				4E37250623BF1879003F4087 /* Home.swift in Sources */,
 				4E37250423BF141C003F4087 /* PackableObject.swift in Sources */,
 				4E37250223BF1370003F4087 /* PackingRect.swift in Sources */,
@@ -197,17 +189,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		4E3724F523BF0EC3003F4087 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E3724F623BF0EC3003F4087 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4E3724F923BF0EC3003F4087 /* Debug */ = {
@@ -236,6 +217,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -260,7 +242,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -296,6 +279,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -314,7 +298,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -339,6 +324,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.alpackaVisualizerr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -359,6 +347,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.alpackaVisualizerr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

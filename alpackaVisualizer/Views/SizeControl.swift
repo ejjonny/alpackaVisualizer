@@ -18,14 +18,18 @@ struct SizeControl: View {
             if random {
                 TextField("Min", text: $minimum)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+#if os(iOS)
                     .keyboardType(.numberPad)
+#endif
                     .padding([.leading, .trailing], 15)
                 Text("to")
                     .font(.system(size: 15))
             }
             TextField(random ? "Max" : title, text: $size)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+#if os(iOS)
                 .keyboardType(.numberPad)
+#endif
                 .padding([.leading, .trailing], 15)
             VStack {
                 Toggle(isOn: $random) { EmptyView() }

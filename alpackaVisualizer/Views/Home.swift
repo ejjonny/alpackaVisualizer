@@ -55,7 +55,9 @@ struct Home: View {
             HStack {
                 TextField("Amount to insert", text: $insertCount)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+#if os(iOS)
                     .keyboardType(.numberPad)
+#endif
                     .padding()
                 Button(action: {
                     self.add()
